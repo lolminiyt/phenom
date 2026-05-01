@@ -47,9 +47,9 @@
     ],
     "post_install": [
         "'install-associations', 'uninstall-associations' | ForEach-Object {",
-        "    if (Test-Path \"$bucketsdir\\phenom-bucket\\scripts\\pineconemc\\$_.reg\") {",
+        "    if (Test-Path \"$bucketsdir\\phenom\\scripts\\pineconemc\\$_.reg\") {",
         "        $exePath = \"$dir\\elyprismlauncher.exe\".Replace('\\', '\\\\')",
-        "        $content = (Get-Content \"$bucketsdir\\phenom-bucket\\scripts\\pineconemc\\$_.reg\").Replace('$EXEPATH', $exePath)",
+        "        $content = (Get-Content \"$bucketsdir\\phenom\\scripts\\pineconemc\\$_.reg\").Replace('$EXEPATH', $exePath)",
         "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
         "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
         "    }",
