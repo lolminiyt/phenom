@@ -4,9 +4,7 @@
     "homepage": "https://github.com/ElyPrismLauncher/Launcher",
     "license": "GPL-3.0-only",
     "notes": [
-        "To add PineconeMC file association options for .ZIPs and .MRPACKS, run this:",
-        "reg import \"$dir\\install-associations.reg\"",
-        ""
+        "PineconeMC"
     ],
     "architecture": {
         "64bit": {
@@ -44,16 +42,6 @@
         "    }",
         "}",
         "Remove-Item -Path \"$dir\\prismlauncher_updater.exe\" -Force -ErrorAction Ignore"
-    ],
-    "post_install": [
-        "'install-associations', 'uninstall-associations' | ForEach-Object {",
-        "    if (Test-Path \"$bucketsdir\\phenom\\scripts\\pineconemc\\$_.reg\") {",
-        "        $exePath = \"$dir\\elyprismlauncher.exe\".Replace('\\', '\\\\')",
-        "        $content = (Get-Content \"$bucketsdir\\phenom\\scripts\\pineconemc\\$_.reg\").Replace('$EXEPATH', $exePath)",
-        "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
-        "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
-        "    }",
-        "}"
     ],
     "bin": "elyprismlauncher.exe",
     "shortcuts": [
