@@ -1,0 +1,46 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\elyprismlauncher.exe]
+@="Minecraft Mod-Pack"
+
+[HKEY_CURRENT_USER\Software\Classes\elyprismlauncher.exe\DefaultIcon]
+@="$EXEPATH,0"
+
+[HKEY_CURRENT_USER\Software\Classes\elyprismlauncher.exe\shell]
+@="open"
+
+[HKEY_CURRENT_USER\Software\Classes\elyprismlauncher.exe\shell\open]
+@="Import into PineconeMC Launcher"
+
+[HKEY_CURRENT_USER\Software\Classes\elyprismlauncher.exe\shell\open\command]
+@="$EXEPATH"
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\elyprismlauncher.exe\shell\open\command]
+@="$EXEPATH -I \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\elyprismlauncher.exe]
+"FriendlyAppName"= "PineconeMC Launcher"
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\elyprismlauncher.exe\Capabilities]
+"ApplicationDescription"="Minecraft Mod-Pack"
+
+[HKEY_CURRENT_USER\Software\RegisteredApplications]
+"PineconeMC Launcher"="Software\Classes\Applications\elyprismlauncher.exe\Capabilities"
+
+[HKEY_CURRENT_USER\Software\Classes\.zip\OpenWithList]
+"elyprismlauncher.exe"=""
+
+[HKEY_CURRENT_USER\Software\Classes\.zip\OpenWithProgids]
+"elyprismlauncher.exe"=""
+
+[HKEY_CURRENT_USER\Software\Classes\.mrpack\OpenWithList]
+"elyprismlauncher.exe"=""
+
+[HKEY_CURRENT_USER\Software\Classes\.mrpack\OpenWithProgids]
+"elyprismlauncher.exe"=""
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\elyprismlauncher.exe\Capabilities\FileAssociations]
+".mrpack"="elyprismlauncher.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\elyprismlauncher.exe\Capabilities\FileAssociations]
+".zip"="elyprismlauncher.exe"
